@@ -1883,7 +1883,7 @@ def check_update():
     """
     config = get_dashboard_conf()
     try:
-        data = urllib.request.urlopen("https://api.github.com/repos/AutoFTbot/WireGuard-Dashboard-ID.git").read()
+        data = urllib.request.urlopen("https://api.github.com/repos/AutoFTbot/WireGuard-Dashboard-ID/releases").read()
         output = json.loads(data)
         release = [i for i in output if not i["prerelease"]]
 
